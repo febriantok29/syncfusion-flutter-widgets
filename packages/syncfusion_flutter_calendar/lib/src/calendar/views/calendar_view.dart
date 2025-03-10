@@ -6477,7 +6477,7 @@ class _CalendarViewState extends State<_CalendarView>
     final Widget shadowView = Divider(
       height: 1,
       thickness: 1,
-      color: borderColor.withOpacity(borderColor.a * 0.5),
+      color: borderColor.withOpacity(borderColor.alpha * 0.5),
     );
 
     final double timeLabelWidth = CalendarViewHelper.getTimeLabelWidth(
