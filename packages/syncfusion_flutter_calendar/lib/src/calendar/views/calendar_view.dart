@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide SelectionDetails;
 import 'package:flutter/rendering.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
@@ -6477,7 +6477,7 @@ class _CalendarViewState extends State<_CalendarView>
     final Widget shadowView = Divider(
       height: 1,
       thickness: 1,
-      color: borderColor.withOpacity(borderColor.opacity * 0.5),
+      color: borderColor.withOpacity(borderColor.a * 0.5),
     );
 
     final double timeLabelWidth = CalendarViewHelper.getTimeLabelWidth(

@@ -5803,7 +5803,7 @@ class _SfCalendarState extends State<SfCalendar>
     final double dividerHeight = _useMobilePlatformUI ? 0 : 1;
     Color dividerColor =
         widget.cellBorderColor ?? _calendarTheme.cellBorderColor!;
-    dividerColor = dividerColor.withOpacity(dividerColor.opacity * 0.5);
+    dividerColor = dividerColor.withOpacity(dividerColor.a * 0.5);
     int numberOfEvents = 0;
 
     double appointmentHeight = 0;
@@ -9523,7 +9523,7 @@ class _CalendarHeaderViewState extends State<_CalendarHeaderView> {
     final Color headerBackgroundColor = widget.headerStyle.backgroundColor ??
         widget.calendarTheme.headerBackgroundColor!;
     final Color arrowColor =
-        headerTextColor.withOpacity(headerTextColor.opacity * 0.6);
+        headerTextColor.withOpacity(headerTextColor.a * 0.6);
     Color prevArrowColor = arrowColor;
     Color nextArrowColor = arrowColor;
     final TextStyle style = TextStyle(color: arrowColor);
@@ -9761,7 +9761,7 @@ class _CalendarHeaderViewState extends State<_CalendarHeaderView> {
         widget.maxDate,
         dates,
         widget.nonWorkingDays)) {
-      nextArrowColor = nextArrowColor.withOpacity(nextArrowColor.opacity * 0.5);
+      nextArrowColor = nextArrowColor.withOpacity(nextArrowColor.a * 0.5);
     }
 
     if (!DateTimeHelper.canMoveToPreviousView(
@@ -9771,7 +9771,7 @@ class _CalendarHeaderViewState extends State<_CalendarHeaderView> {
         widget.maxDate,
         dates,
         widget.nonWorkingDays)) {
-      prevArrowColor = prevArrowColor.withOpacity(prevArrowColor.opacity * 0.5);
+      prevArrowColor = prevArrowColor.withOpacity(prevArrowColor.a * 0.5);
     }
 
     MainAxisAlignment getAlignmentFromTextAlign() {
@@ -11090,7 +11090,7 @@ class _CustomSplash extends InteractiveInkFeature {
       ..addListener(controller.markNeedsPaint)
       ..addStatusListener(_handleAlphaStatusChanged);
     _alpha = _alphaController!.drive(IntTween(
-      begin: color.alpha,
+      begin: color.a,
       end: 0,
     ));
 
